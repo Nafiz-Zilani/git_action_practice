@@ -27,3 +27,7 @@ jobs:
       - name: Run Python file
         run: |
           python3 main.py
+
+      - name: Take value from Github
+        run: |
+          echo "HI";
