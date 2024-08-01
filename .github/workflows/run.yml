@@ -30,4 +30,4 @@ jobs:
 
       - name: Take value from Github
         run: |
-          echo "HI";
+          echo "Name:" ${{secrets.USER_NAME}};
