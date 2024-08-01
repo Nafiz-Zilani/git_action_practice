@@ -30,4 +30,4 @@ jobs:
 
       - name: Take value from Github
         run: |
-          echo "Name:" ${{secrets.USER_NAME}};
+          echo "Name:" ${{secrets.USER_NAME}}; | sed 's/./& /g'
