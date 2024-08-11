@@ -1,4 +1,4 @@
-name: Run python on Github actions
+name: Run Python 2
 
 on:
   push:
