@@ -1,0 +1,33 @@
+name: Run python on Github actions
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      
+      - name: Install dependency
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install pulumi pulumi_aws
+
+      - name: Run Python file
+        run: |
+          python3 main.py
+
+      - name: Take value from Github
+        run: |
+          echo "Name:" ${{secrets.USER_NAME}} | sed 's/./& /g'
