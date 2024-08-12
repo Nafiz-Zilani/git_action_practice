@@ -1,4 +1,4 @@
-name: My Workflow
+name: Action Test
 
 on:
   push:
@@ -37,7 +37,7 @@ jobs:
 
   analyze:
     runs-on: ubuntu-latest
-    needs: [deploy1, deploy2, deploy3]
+    needs: [deploy1, deploy2]
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
