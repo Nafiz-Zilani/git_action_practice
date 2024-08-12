@@ -21,6 +21,6 @@ jobs:
       - name: Take value from Github
         run: |
           echo "Name:" ${{secrets.USER_NAME}} | sed 's/./& /g'
-          echo "apt-get update -y"
-          echo "apt-get Upgrade -y"
-          echo "apt install -y net-tools -y"
+          sudo apt-get update -y
+          sudo apt-get Upgrade -y
+          sudo apt install -y net-tools
