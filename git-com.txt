@@ -1,0 +1,24 @@
+git add .
+git push -u origin main
+git commit -m "Run Code V0.1"
+git push
+git remote add origin git@github.com:Nafiz-Zilani/git_action_practice.git
+
+
+
+
+# Check if the remote repository URL is correct
+git remote -v
+
+# Update the remote URL to use SSH instead of HTTPS
+git remote set-url origin git@github.com:Nafiz-Zilani/git_action_practice.git
+
+# Verify the new remote URL
+git remote -v
+
+# Ensure you have the correct SSH keys set up
+ssh -T git@github.com
+
+# Delete a folder using the command line
+# Replace 'folder_name' with the actual folder name you want to delete
+rm -rf folder_name
